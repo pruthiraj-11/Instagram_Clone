@@ -7,8 +7,12 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.app.instagramclone.databinding.ActivitySignupBinding
 
 class SignupActivity : AppCompatActivity() {
+    val binding by lazy {
+        ActivitySignupBinding.inflate(layoutInflater)
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
