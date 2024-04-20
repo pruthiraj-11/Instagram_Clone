@@ -1,12 +1,11 @@
-package com.app.instagramclone
+package com.app.instagramclone.Activities
 
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.app.instagramclone.R
 import com.app.instagramclone.databinding.ActivitySignupBinding
 
 class SignupActivity : AppCompatActivity() {
