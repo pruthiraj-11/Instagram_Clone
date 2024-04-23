@@ -10,6 +10,8 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.app.instagramclone.Models.User
 import com.app.instagramclone.R
+import com.app.instagramclone.Utils.USER_NODE
+import com.app.instagramclone.Utils.uploadImage
 import com.app.instagramclone.databinding.ActivitySignupBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -18,24 +20,32 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.ktx.Firebase
 
 class SignupActivity : AppCompatActivity() {
-    val binding by lazy {
+    private val binding by lazy {
         ActivitySignupBinding.inflate(layoutInflater)
     }
     lateinit var user: User
-    private val launcher=registerForActivityResult(ActivityResultContracts.GetContent()){
-
+    private val launcher=registerForActivityResult(ActivityResultContracts.GetContent()){uri->
+        uri?.let {
+            uploadImage(uri, USER_NODE){
+                if (it != null) {
+                    if (it.isNotEmpty()) {
+                        user.profileimage=it
+                        binding.profileImage.setImageURI(uri)
+                    }
+                }
+            }
+        }
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(binding.root)
-        user= User()
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
+        user= User()
         binding.signupbtn.setOnClickListener {
             if ((binding.name.editText?.text.toString() == "") or
                 (binding.mail.editText?.text.toString() == "") or
@@ -57,6 +67,9 @@ class SignupActivity : AppCompatActivity() {
                         }
                     }
             }
+        }
+        binding.pickImage.setOnClickListener {
+            launcher.launch("image/*")
         }
     }
 }
