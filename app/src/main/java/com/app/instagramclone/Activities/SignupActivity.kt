@@ -1,5 +1,6 @@
 package com.app.instagramclone.Activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -61,6 +62,8 @@ class SignupActivity : AppCompatActivity() {
                             user.password= binding.password.editText?.text.toString()
                             FirebaseDatabase.getInstance().getReference().child("Users").child(Firebase.auth.currentUser!!.uid).setValue(user).addOnSuccessListener {
                                 Toast.makeText(this@SignupActivity,"Signup Successfully.",Toast.LENGTH_SHORT).show()
+                                startActivity(Intent(this@SignupActivity,HomeActivity::class.java))
+                                finish()
                             }
                         } else {
                             Toast.makeText(this@SignupActivity,it.exception?.localizedMessage,Toast.LENGTH_SHORT).show()
@@ -69,7 +72,16 @@ class SignupActivity : AppCompatActivity() {
             }
         }
         binding.pickImage.setOnClickListener {
-            launcher.launch("image/*")
+            try {
+                launcher.launch("image/*")
+            } catch (ex) {
+
+            }
+
+        }
+
+        binding.existingUser.setOnClickListener {
+            startActivity(Intent(this@SignupActivity,SignInActivity::class.java))
         }
     }
 }
