@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.SignupActivity">
+    tools:context=".ui.activities.SignupActivity">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/profile_image"
@@ -103,23 +103,14 @@
         app:layout_constraintTop_toBottomOf="@+id/password" />
 
     <TextView
-        android:id="@+id/forgot_pass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Forgot Password?"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signupbtn" />
-
-    <TextView
         android:id="@+id/existing_user"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Already have a account"
+        android:layout_marginTop="16dp"
+        android:text="Already have a account? Login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/forgot_pass" />
+        app:layout_constraintTop_toBottomOf="@+id/signupbtn" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

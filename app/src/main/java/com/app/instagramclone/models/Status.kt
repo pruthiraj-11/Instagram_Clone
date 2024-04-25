@@ -1,4 +1,4 @@
-package com.app.instagramclone.Models
+package com.app.instagramclone.models
 
 class Status{
     var profileimage:String?=null

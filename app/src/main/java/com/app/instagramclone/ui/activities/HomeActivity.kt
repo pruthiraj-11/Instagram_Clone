@@ -1,4 +1,4 @@
-package com.app.instagramclone.Activities
+package com.app.instagramclone.ui.activities
 
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -24,7 +24,7 @@ class HomeActivity : AppCompatActivity() {
 
         val navController = findNavController(R.id.nav_host_fragment_activity_home)
         val appBarConfiguration = AppBarConfiguration(
-            setOf(R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications)
+            setOf(R.id.navigation_home, R.id.navigation_search, R.id.navigation_add_post, R.id.navigation_reels, R.id.navigation_profile)
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)

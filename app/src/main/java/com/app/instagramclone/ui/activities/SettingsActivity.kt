@@ -1,4 +1,4 @@
-package com.app.instagramclone.Activities
+package com.app.instagramclone.ui.activities
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
@@ -6,10 +6,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.app.instagramclone.R
+import com.app.instagramclone.databinding.ActivitySttingsBinding
 
 class SettingsActivity : AppCompatActivity() {
-    val binding by lazy {
-        ActivitySettingsBinding.inflate(layoutInflater)
+    private val binding by lazy {
+        ActivitySttingsBinding.inflate(layoutInflater)
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
