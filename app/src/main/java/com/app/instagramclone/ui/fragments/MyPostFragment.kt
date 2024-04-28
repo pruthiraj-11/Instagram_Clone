@@ -1,21 +1,20 @@
-package com.app.instagramclone.ui.fragments.search
+package com.app.instagramclone.ui.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.app.instagramclone.R
-import com.app.instagramclone.databinding.FragmentSearchBinding
+import androidx.fragment.app.Fragment
+import com.app.instagramclone.databinding.FragmentMyPostBinding
 
-class SearchFragment : Fragment() {
-    private var _binding: FragmentSearchBinding? = null
+class MyPostFragment : Fragment() {
+    private var _binding: FragmentMyPostBinding? = null
     private val binding get() = _binding!!
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentSearchBinding.inflate(inflater, container, false)
+        _binding = FragmentMyPostBinding.inflate(inflater, container, false)
 
         return binding.root
     }
