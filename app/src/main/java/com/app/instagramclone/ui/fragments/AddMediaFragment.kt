@@ -2,11 +2,10 @@ package com.app.instagramclone.ui.fragments
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.app.instagramclone.R
+import androidx.fragment.app.Fragment
 import com.app.instagramclone.databinding.FragmentAddMediaBinding
 import com.app.instagramclone.ui.activities.post.AddPostActivity
 import com.app.instagramclone.ui.activities.post.AddReelsActivity
