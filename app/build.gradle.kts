@@ -52,6 +52,7 @@ dependencies {
     implementation(libs.firebase.storage)
     implementation(libs.shimmer)
     implementation(libs.rootbeer.lib)
+    implementation("com.hbb20:ccp:2.7.3")
     implementation(libs.androidx.media3.exoplayer)
     implementation(libs.androidx.media3.exoplayer.dash)
     implementation(libs.androidx.media3.ui)
