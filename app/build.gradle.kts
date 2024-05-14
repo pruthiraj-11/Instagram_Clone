@@ -55,6 +55,8 @@ dependencies {
     implementation(libs.shimmer)
     implementation(libs.rootbeer.lib)
     implementation("com.hbb20:ccp:2.7.3")
+    implementation("com.google.dagger:hilt-android:2.44")
+    kapt("com.google.dagger:hilt-android-compiler:2.44")
     implementation("com.makeramen:roundedimageview:2.3.0")
     implementation(libs.androidx.media3.exoplayer)
     implementation(libs.androidx.media3.exoplayer.dash)
