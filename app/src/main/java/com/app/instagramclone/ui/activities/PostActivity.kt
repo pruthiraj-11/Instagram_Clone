@@ -24,5 +24,8 @@ class PostActivity : AppCompatActivity() {
         setSupportActionBar(binding.materialToolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
+        binding.materialToolbar.setNavigationOnClickListener {
+            finish()
+        }
     }
 }
