@@ -20,11 +20,15 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.makeramen.roundedimageview.RoundedImageView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
         android:scaleType="fitCenter"
         android:src="@drawable/new_post"
         app:layout_constraintEnd_toEndOf="parent"
-        app:riv_oval="true"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialToolbar"
+        app:riv_border_width="2dip"
+        app:riv_corner_radius="30dip"
+        app:riv_oval="false" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
