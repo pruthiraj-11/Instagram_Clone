@@ -20,6 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/roundedImageView"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:scaleType="fitCenter"
@@ -27,9 +28,25 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/materialToolbar"
+        app:riv_border_color="#333333"
         app:riv_border_width="2dip"
         app:riv_corner_radius="30dip"
-        app:riv_border_color="#333333"
         app:riv_oval="false" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/mail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="@+id/roundedImageView"
+        app:layout_constraintStart_toStartOf="@+id/roundedImageView"
+        app:layout_constraintTop_toBottomOf="@+id/roundedImageView">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/usermail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
