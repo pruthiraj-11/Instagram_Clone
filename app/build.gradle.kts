@@ -60,6 +60,7 @@ dependencies {
     implementation(libs.roundedimageview)
     implementation(libs.volley)
     implementation(libs.dexter)
+    implementation("com.github.bumptech.glide:glide:4.16.0")
     implementation(libs.androidx.media3.exoplayer)
     implementation(libs.androidx.media3.exoplayer.dash)
     implementation(libs.androidx.media3.ui)
